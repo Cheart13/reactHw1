@@ -20,7 +20,7 @@ function App() {
 			{<Profile name={profile.name} avatar={profile.avatar} tag={profile.tag} location={profile.location} stats={profile.stats} />}
 			{frends.map(friend =>
 				
-				<FriendListItem dryg={friend} name='clava' />
+				<FriendListItem friend={friend} />
 			)}
 
 		</div>

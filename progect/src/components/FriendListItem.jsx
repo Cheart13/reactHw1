@@ -2,21 +2,20 @@ import React from 'react';
 import friends from './friends.json';
 
 
-const FriendListItem =(props, name)=>
+const FriendListItem =(props)=>
 {	
 	let nameclass;
-	if(props.dryg.isOnline){
+	if(props.friend.isOnline){
 		nameclass='online';
 	}else nameclass='ofline';
-	let namaewa=JSON.stringify(name);
-	console.log(namaewa)
+	
 	
 	return (
 		<div className='item'>
 			
 			<div className={'indicator '+ nameclass}></div>	
-			<img src={props.dryg.avatar} alt="" />
-			<div className='name'>{props.name}</div>
+			<img src={props.friend.avatar} alt="" />
+			<div className='name'>{props.friend.name}</div>
 		</div>
 
 	);
